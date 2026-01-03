@@ -1,22 +1,27 @@
 import { Link } from "react-router-dom";
-import { ChevronRight, Target, Lightbulb, Users } from "lucide-react";
+import { ChevronRight, Camera, LayoutDashboard, CreditCard, BarChart3 } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimation";
 
-const values = [
+const features = [
   {
-    icon: Target,
-    title: "Mission-Driven",
-    description: "Committed to revolutionizing educational management through technology that works.",
+    icon: Camera,
+    title: "Smart Attendance Monitoring",
+    description: "Camera-based attendance detection with real-time tracking for accuracy and reliability.",
   },
   {
-    icon: Lightbulb,
-    title: "Innovation First",
-    description: "Constantly evolving our solutions to meet the changing needs of modern education.",
+    icon: LayoutDashboard,
+    title: "Comprehensive Dashboards",
+    description: "Role-based dashboards offering tailored access for administrators, teachers, parents, and students.",
   },
   {
-    icon: Users,
-    title: "Student-Centric",
-    description: "Every feature designed with student success and institutional growth in mind.",
+    icon: CreditCard,
+    title: "Secure Fee Management",
+    description: "Transparent, streamlined, and secure payment processing with complete financial visibility.",
+  },
+  {
+    icon: BarChart3,
+    title: "Performance Analytics",
+    description: "Actionable academic insights through data-driven performance reports.",
   },
 ];
 
@@ -27,66 +32,73 @@ export const AboutSection = () => {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
       
       <div className="container-custom relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
-          <div>
-            <ScrollAnimation animation="fade-right">
-              <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-                About My Vidyon
-              </span>
-            </ScrollAnimation>
+        {/* Header */}
+        <div className="text-center max-w-4xl mx-auto mb-12">
+          <ScrollAnimation animation="fade-up">
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+              About My Vidyon
+            </span>
+          </ScrollAnimation>
 
-            <ScrollAnimation animation="fade-right" delay={100}>
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Empowering Institutions to{" "}
-                <span className="text-gradient">Achieve Excellence</span>
-              </h2>
-            </ScrollAnimation>
+          <ScrollAnimation animation="fade-up" delay={100}>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              Redefining Educational Management,{" "}
+              <span className="text-gradient">Digitally</span>
+            </h2>
+          </ScrollAnimation>
 
-            <ScrollAnimation animation="fade-right" delay={200}>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Founded with a vision to bridge the gap between traditional education management 
-                and modern technology, My Vidyon delivers enterprise-grade ERP solutions 
-                specifically designed for educational institutions.
-              </p>
-            </ScrollAnimation>
+          <ScrollAnimation animation="fade-up" delay={200}>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              My Vidyon is a powerful and comprehensive ERP platform built exclusively for schools and colleges. 
+              Designed to simplify daily operations and enhance collaboration, My Vidyon connects students, 
+              teachers, parents, and administrators through a single, unified digital ecosystem.
+            </p>
+          </ScrollAnimation>
 
-            <ScrollAnimation animation="fade-right" delay={300}>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Our team of education specialists and technology experts work hand-in-hand 
-                to create solutions that address real-world challenges faced by schools, 
-                colleges, and universities. From attendance tracking to comprehensive 
-                administrative tools — we're your partner in educational transformation.
-              </p>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="fade-right" delay={400}>
-              <Link to="/about" className="btn-primary">
-                Learn More About Us
-                <ChevronRight className="w-5 h-5" />
-              </Link>
-            </ScrollAnimation>
-          </div>
-
-          {/* Values Grid */}
-          <div className="grid gap-6">
-            {values.map((value, index) => (
-              <ScrollAnimation key={index} animation="fade-left" delay={index * 100}>
-                <div className="card-elevated p-6 flex gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-                    <value.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-semibold text-lg mb-2">{value.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              </ScrollAnimation>
-            ))}
-          </div>
+          <ScrollAnimation animation="fade-up" delay={300}>
+            <p className="text-muted-foreground leading-relaxed">
+              From smart attendance tracking to secure fee management and performance analytics, 
+              My Vidyon delivers real-time insights that empower institutions to operate efficiently, 
+              transparently, and confidently in today's digital-first education environment.
+            </p>
+          </ScrollAnimation>
         </div>
+
+        {/* Key Features Label */}
+        <ScrollAnimation animation="fade-up" delay={400}>
+          <div className="text-center mb-8">
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider">
+              Key Features
+            </span>
+          </div>
+        </ScrollAnimation>
+
+        {/* Features Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <ScrollAnimation key={index} animation="fade-up" delay={450 + index * 80}>
+              <div className="card-elevated p-6 text-center h-full">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-heading font-semibold text-lg mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </ScrollAnimation>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <ScrollAnimation animation="fade-up" delay={800}>
+          <div className="text-center mt-10">
+            <Link to="/about" className="btn-primary">
+              Learn More About Us
+              <ChevronRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

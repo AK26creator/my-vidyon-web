@@ -1,44 +1,30 @@
-import { 
-  Zap, 
-  Lock, 
-  Cloud, 
-  Headphones, 
-  RefreshCw, 
-  Settings,
-  ArrowRight
-} from "lucide-react";
+import { Users, Clock, Monitor, Headphones } from "lucide-react";
 import ScrollAnimation from "./ScrollAnimation";
 
-const features = [
+const benefits = [
   {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Optimized performance ensuring instant response times across all modules.",
+    icon: Users,
+    value: "95%",
+    title: "Parent Satisfaction",
+    description: "Enhanced trust through real-time access to student activities and updates.",
   },
   {
-    icon: Lock,
-    title: "Bank-Grade Security",
-    description: "End-to-end encryption and role-based access control for complete data protection.",
+    icon: Clock,
+    value: "60%",
+    title: "Operational Time Savings",
+    description: "Automation reduces administrative workload significantly.",
   },
   {
-    icon: Cloud,
-    title: "Cloud-Native",
-    description: "Access your data anywhere, anytime with our secure cloud infrastructure.",
+    icon: Monitor,
+    value: "100%",
+    title: "Digital Integration",
+    description: "Completely paperless workflows for modern institutions.",
   },
   {
     icon: Headphones,
-    title: "24/7 Support",
-    description: "Dedicated support team available round the clock for immediate assistance.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Auto Updates",
-    description: "Continuous improvements and new features delivered seamlessly without downtime.",
-  },
-  {
-    icon: Settings,
-    title: "Fully Customizable",
-    description: "Tailor every aspect of the system to match your institution's unique workflow.",
+    value: "24/7",
+    title: "Platform Accessibility",
+    description: "Anytime, anywhere access for all stakeholders.",
   },
 ];
 
@@ -51,52 +37,43 @@ export const FeaturesSection = () => {
 
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <ScrollAnimation animation="fade-up">
             <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-              Why Choose Us
+              Key Benefits Across Stakeholders
             </span>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fade-up" delay={100}>
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Built for{" "}
-              <span className="text-gradient">Modern Education</span>
+              Measurable{" "}
+              <span className="text-gradient">Impact</span>
             </h2>
-          </ScrollAnimation>
-
-          <ScrollAnimation animation="fade-up" delay={200}>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Experience the difference with features designed by educators, 
-              for educators. Every capability purposefully crafted to enhance 
-              your institution's efficiency.
-            </p>
           </ScrollAnimation>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        {/* Benefits Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit, index) => (
             <ScrollAnimation key={index} animation="fade-up" delay={index * 80}>
-              <div className="group relative p-8 rounded-3xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-card">
+              <div className="group relative p-6 rounded-3xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-card text-center">
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-soft">
-                  <feature.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-soft">
+                  <benefit.icon className="w-7 h-7 text-primary-foreground" />
+                </div>
+
+                {/* Value */}
+                <div className="font-heading font-bold text-3xl text-primary mb-2">
+                  {benefit.value}
                 </div>
 
                 {/* Content */}
-                <h3 className="font-heading font-semibold text-xl mb-3">
-                  {feature.title}
+                <h3 className="font-heading font-semibold text-lg mb-2">
+                  {benefit.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {feature.description}
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {benefit.description}
                 </p>
-
-                {/* Hover Arrow */}
-                <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-medium">Learn more</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
 
                 {/* Gradient Border Effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl" />
