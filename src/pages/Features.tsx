@@ -109,20 +109,18 @@ const Features = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-28 pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="hero-orb hero-orb-primary w-[300px] h-[300px] top-[10%] right-[5%] animate-pulse-glow" />
-        <div className="hero-orb hero-orb-secondary w-[250px] h-[250px] bottom-[10%] left-[10%] animate-pulse-glow" style={{ animationDelay: "-2s" }} />
         
         <div className="container-custom relative text-center">
           <ScrollAnimation animation="fade-up">
-            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Platform Features
             </span>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl mx-auto">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-5 max-w-4xl mx-auto">
               Built for <span className="text-gradient">Modern Education</span>
             </h1>
           </ScrollAnimation>
@@ -137,34 +135,34 @@ const Features = () => {
       </section>
 
       {/* Core Features */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-3">
               Core <span className="text-gradient">Capabilities</span>
             </h2>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
               The foundation of everything we offer. These features power every module in our platform.
             </p>
           </ScrollAnimation>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {coreFeatures.map((feature, index) => (
               <ScrollAnimation key={index} animation="fade-up" delay={index * 80}>
-                <div className="group card-elevated p-8 h-full hover:border-primary/30">
-                  <div className="flex items-start justify-between mb-5">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="w-7 h-7 text-primary-foreground" />
+                <div className="group card-elevated p-6 h-full hover:border-primary/30">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <feature.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
-                    <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-full">
                       {feature.stats}
                     </span>
                   </div>
-                  <h3 className="font-heading font-semibold text-xl mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                  <h3 className="font-heading font-semibold text-lg mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </ScrollAnimation>
             ))}
@@ -173,26 +171,26 @@ const Features = () => {
       </section>
 
       {/* Technical Features */}
-      <section className="section-padding bg-foreground text-background">
+      <section className="py-12 md:py-16 bg-foreground text-background">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-3">
               Technical <span className="text-primary">Excellence</span>
             </h2>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <p className="text-background/70 text-center max-w-2xl mx-auto mb-12">
+            <p className="text-background/70 text-center max-w-2xl mx-auto mb-10">
               Under the hood, our platform is built on cutting-edge technology for reliability and scale.
             </p>
           </ScrollAnimation>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {technicalFeatures.map((feature, index) => (
               <ScrollAnimation key={index} animation="scale" delay={index * 80}>
-                <div className="p-6 rounded-2xl bg-background/5 border border-background/10 hover:bg-background/10 transition-colors">
-                  <feature.icon className="w-10 h-10 text-primary mb-4" />
-                  <h3 className="font-heading font-semibold text-lg text-background mb-2">{feature.title}</h3>
+                <div className="p-5 rounded-2xl bg-background/5 border border-background/10 hover:bg-background/10 transition-colors">
+                  <feature.icon className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="font-heading font-semibold text-base text-background mb-2">{feature.title}</h3>
                   <p className="text-background/60 text-sm">{feature.description}</p>
                 </div>
               </ScrollAnimation>
@@ -202,16 +200,16 @@ const Features = () => {
       </section>
 
       {/* Comparison */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-3">
               Why <span className="text-gradient">My Vidyon</span>?
             </h2>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
               See how we stack up against traditional ERP solutions.
             </p>
           </ScrollAnimation>
@@ -224,7 +222,7 @@ const Features = () => {
                 <div className="text-center">Others</div>
               </div>
               {comparisonPoints.map((point, index) => (
-                <div key={index} className="grid grid-cols-3 gap-4 p-4 border-t border-border items-center">
+                <div key={index} className="grid grid-cols-3 gap-4 p-3 border-t border-border items-center">
                   <div className="text-sm">{point.feature}</div>
                   <div className="flex justify-center">
                     {point.us ? (
@@ -248,9 +246,9 @@ const Features = () => {
       </section>
 
       {/* Stats */}
-      <section className="section-padding bg-muted/30">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container-custom">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[
               { icon: Users, value: "50K+", label: "Daily Active Users" },
               { icon: Clock, value: "< 1s", label: "Average Load Time" },
@@ -258,10 +256,10 @@ const Features = () => {
               { icon: Headphones, value: "< 2hr", label: "Avg. Response Time" },
             ].map((stat, index) => (
               <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
-                <div className="text-center card-elevated p-8">
-                  <stat.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="font-heading text-4xl font-bold text-gradient mb-2">{stat.value}</div>
-                  <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-center card-elevated p-6">
+                  <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <div className="font-heading text-3xl font-bold text-gradient mb-1">{stat.value}</div>
+                  <div className="text-muted-foreground text-sm">{stat.label}</div>
                 </div>
               </ScrollAnimation>
             ))}

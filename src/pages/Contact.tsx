@@ -94,25 +94,24 @@ const Contact = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-28 pb-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="hero-orb hero-orb-primary w-[400px] h-[400px] top-[-10%] left-[-10%] animate-pulse-glow" />
         
         <div className="container-custom relative text-center">
           <ScrollAnimation animation="fade-up">
-            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Get in Touch
             </span>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
               Let's <span className="text-gradient">Connect</span>
             </h1>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={200}>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Ready to transform your institution? Have questions? Our team is here 
               to help you find the perfect solution.
             </p>
@@ -121,22 +120,22 @@ const Contact = () => {
       </section>
 
       {/* Contact Grid */}
-      <section className="section-padding">
+      <section className="py-10 md:py-14">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <ScrollAnimation animation="fade-right">
-                <div className="card-elevated p-8 md:p-10">
-                  <div className="flex items-center gap-3 mb-6">
-                    <MessageSquare className="w-6 h-6 text-primary" />
-                    <h2 className="font-heading font-bold text-2xl">Send us a Message</h2>
+                <div className="card-elevated p-6 md:p-8">
+                  <div className="flex items-center gap-3 mb-5">
+                    <MessageSquare className="w-5 h-5 text-primary" />
+                    <h2 className="font-heading font-bold text-xl">Send us a Message</h2>
                   </div>
                   
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-6">
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium mb-1.5">
                           Full Name *
                         </label>
                         <input
@@ -147,12 +146,12 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           maxLength={100}
-                          className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                          className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-sm"
                           placeholder="John Doe"
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium mb-1.5">
                           Email Address *
                         </label>
                         <input
@@ -163,15 +162,15 @@ const Contact = () => {
                           onChange={handleChange}
                           required
                           maxLength={255}
-                          className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                          className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-sm"
                           placeholder="john@school.edu"
                         />
                       </div>
                     </div>
                     
-                    <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium mb-1.5">
                           Phone Number
                         </label>
                         <input
@@ -181,12 +180,12 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           maxLength={20}
-                          className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                          className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-sm"
                           placeholder="+1 (234) 567-890"
                         />
                       </div>
                       <div>
-                        <label htmlFor="institution" className="block text-sm font-medium mb-2">
+                        <label htmlFor="institution" className="block text-sm font-medium mb-1.5">
                           Institution Name
                         </label>
                         <input
@@ -196,14 +195,14 @@ const Contact = () => {
                           value={formData.institution}
                           onChange={handleChange}
                           maxLength={200}
-                          className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
+                          className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors text-sm"
                           placeholder="ABC Public School"
                         />
                       </div>
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium mb-1.5">
                         How can we help? *
                       </label>
                       <textarea
@@ -212,9 +211,9 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        rows={5}
+                        rows={4}
                         maxLength={1000}
-                        className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
+                        className="w-full px-4 py-2.5 rounded-xl border border-border bg-background focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none text-sm"
                         placeholder="Tell us about your requirements, number of students, current systems, etc."
                       />
                     </div>
@@ -226,12 +225,12 @@ const Contact = () => {
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="w-5 h-5 border-2 border-accent-foreground border-t-transparent rounded-full animate-spin" />
+                          <div className="w-4 h-4 border-2 border-accent-foreground border-t-transparent rounded-full animate-spin" />
                           Sending...
                         </>
                       ) : (
                         <>
-                          <Send className="w-5 h-5" />
+                          <Send className="w-4 h-4" />
                           Send Message
                         </>
                       )}
@@ -242,26 +241,26 @@ const Contact = () => {
             </div>
 
             {/* Contact Info Sidebar */}
-            <div className="space-y-6">
+            <div className="space-y-5">
               <ScrollAnimation animation="fade-left">
-                <div className="card-elevated p-6">
+                <div className="card-elevated p-5">
                   <div className="flex items-center gap-3 mb-4">
-                    <Building2 className="w-6 h-6 text-primary" />
-                    <h3 className="font-heading font-bold text-lg">Contact Information</h3>
+                    <Building2 className="w-5 h-5 text-primary" />
+                    <h3 className="font-heading font-bold text-base">Contact Information</h3>
                   </div>
-                  <div className="space-y-5">
+                  <div className="space-y-4">
                     {contactInfo.map((info, index) => (
                       <a
                         key={index}
                         href={info.link}
-                        className="flex items-start gap-4 group"
+                        className="flex items-start gap-3 group"
                       >
-                        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                          <info.icon className="w-5 h-5 text-primary" />
+                        <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                          <info.icon className="w-4 h-4 text-primary" />
                         </div>
                         <div>
-                          <div className="text-sm text-muted-foreground">{info.title}</div>
-                          <div className="font-medium">{info.value}</div>
+                          <div className="text-xs text-muted-foreground">{info.title}</div>
+                          <div className="font-medium text-sm">{info.value}</div>
                         </div>
                       </a>
                     ))}
@@ -270,15 +269,15 @@ const Contact = () => {
               </ScrollAnimation>
 
               <ScrollAnimation animation="fade-left" delay={100}>
-                <div className="card-elevated p-6 bg-gradient-primary text-primary-foreground">
-                  <h3 className="font-heading font-bold text-lg mb-3">Request a Demo</h3>
-                  <p className="text-primary-foreground/80 text-sm mb-4">
+                <div className="card-elevated p-5 bg-gradient-primary text-primary-foreground">
+                  <h3 className="font-heading font-bold text-base mb-2">Request a Demo</h3>
+                  <p className="text-primary-foreground/80 text-sm mb-3">
                     See My Vidyon in action with a personalized demo tailored to your institution's needs.
                   </p>
-                  <ul className="space-y-2 mb-4">
+                  <ul className="space-y-1.5">
                     {["30-minute live walkthrough", "Q&A with product experts", "Custom pricing discussion"].map((item, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4" />
+                        <CheckCircle2 className="w-3.5 h-3.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -291,26 +290,26 @@ const Contact = () => {
       </section>
 
       {/* FAQs */}
-      <section className="section-padding bg-muted/30">
+      <section className="py-10 md:py-14 bg-muted/30">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-3">
               Frequently Asked <span className="text-gradient">Questions</span>
             </h2>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-8">
               Quick answers to common questions. Can't find what you're looking for? Reach out to us directly.
             </p>
           </ScrollAnimation>
 
-          <div className="max-w-3xl mx-auto grid gap-6">
+          <div className="max-w-3xl mx-auto grid gap-4">
             {faqs.map((faq, index) => (
               <ScrollAnimation key={index} animation="fade-up" delay={150 + index * 50}>
-                <div className="card-elevated p-6">
-                  <h3 className="font-heading font-semibold text-lg mb-2">{faq.question}</h3>
-                  <p className="text-muted-foreground">{faq.answer}</p>
+                <div className="card-elevated p-5">
+                  <h3 className="font-heading font-semibold text-base mb-1.5">{faq.question}</h3>
+                  <p className="text-muted-foreground text-sm">{faq.answer}</p>
                 </div>
               </ScrollAnimation>
             ))}

@@ -4,7 +4,7 @@ import ScrollAnimation from "./ScrollAnimation";
 
 export const CTASection = () => {
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="py-12 md:py-16 relative overflow-hidden">
       <div className="container-custom">
         <div className="relative rounded-3xl overflow-hidden">
           {/* Background */}

@@ -43,19 +43,18 @@ const About = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-28 pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="hero-orb hero-orb-primary w-[400px] h-[400px] top-[-10%] right-[-10%] animate-pulse-glow" />
         
         <div className="container-custom relative">
           <ScrollAnimation animation="fade-up">
-            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               About Us
             </span>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-5 max-w-4xl">
               Transforming Education Through{" "}
               <span className="text-gradient">Intelligent Technology</span>
             </h1>
@@ -72,17 +71,17 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {values.map((item, index) => (
               <ScrollAnimation key={index} animation="fade-up" delay={index * 100}>
-                <div className="card-elevated p-8 text-center h-full">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="card-elevated p-6 text-center h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center mx-auto mb-5">
+                    <item.icon className="w-7 h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="font-heading font-bold text-2xl mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  <h3 className="font-heading font-bold text-xl mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
                 </div>
               </ScrollAnimation>
             ))}
@@ -91,23 +90,23 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="section-padding bg-foreground text-background">
+      <section className="py-12 md:py-16 bg-foreground text-background">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-10">
               Our Impact in <span className="text-primary">Numbers</span>
             </h2>
           </ScrollAnimation>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <ScrollAnimation key={index} animation="scale" delay={index * 100}>
-                <div className="text-center p-6 rounded-2xl bg-background/5 border border-background/10">
-                  <stat.icon className="w-10 h-10 text-primary mx-auto mb-4" />
-                  <div className="font-heading text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="text-center p-5 rounded-2xl bg-background/5 border border-background/10">
+                  <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                  <div className="font-heading text-3xl md:text-4xl font-bold text-primary mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-background/70">{stat.label}</div>
+                  <div className="text-background/70 text-sm">{stat.label}</div>
                 </div>
               </ScrollAnimation>
             ))}
@@ -116,16 +115,16 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-3">
               Our <span className="text-gradient">Journey</span>
             </h2>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
               From a small startup to a leading EdTech company, here's how we've grown.
             </p>
           </ScrollAnimation>
@@ -140,7 +139,7 @@ const About = () => {
                 animation={index % 2 === 0 ? "fade-right" : "fade-left"} 
                 delay={index * 100}
               >
-                <div className={`relative flex items-center gap-8 mb-12 ${
+                <div className={`relative flex items-center gap-8 mb-8 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}>
                   {/* Dot */}
@@ -148,9 +147,9 @@ const About = () => {
                   
                   {/* Content */}
                   <div className={`ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                    <span className="inline-block text-sm font-semibold text-primary mb-2">{milestone.year}</span>
-                    <h3 className="font-heading font-bold text-xl mb-2">{milestone.title}</h3>
-                    <p className="text-muted-foreground">{milestone.description}</p>
+                    <span className="inline-block text-sm font-semibold text-primary mb-1">{milestone.year}</span>
+                    <h3 className="font-heading font-bold text-lg mb-1">{milestone.title}</h3>
+                    <p className="text-muted-foreground text-sm">{milestone.description}</p>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -160,18 +159,18 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding bg-muted/30">
+      <section className="py-12 md:py-16 bg-muted/30">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <ScrollAnimation animation="fade-right">
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="font-heading text-2xl md:text-3xl font-bold mb-5">
                   Why Institutions <span className="text-gradient">Choose Us</span>
                 </h2>
               </ScrollAnimation>
               
               <ScrollAnimation animation="fade-right" delay={100}>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-5">
                   We understand that every institution is unique. That's why our solutions 
                   are built to be flexible, scalable, and intuitive. Our team consists of 
                   education specialists who have walked in your shoes.
@@ -179,7 +178,7 @@ const About = () => {
               </ScrollAnimation>
               
               <ScrollAnimation animation="fade-right" delay={200}>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {[
                     "Deep understanding of educational workflows",
                     "Dedicated implementation and training support",
@@ -188,7 +187,7 @@ const About = () => {
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
                       <Award className="w-5 h-5 text-primary shrink-0" />
-                      <span>{item}</span>
+                      <span className="text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -196,19 +195,19 @@ const About = () => {
             </div>
             
             <ScrollAnimation animation="fade-left">
-              <div className="card-elevated p-8">
-                <blockquote className="text-lg italic text-muted-foreground leading-relaxed mb-6">
+              <div className="card-elevated p-6">
+                <blockquote className="text-base italic text-muted-foreground leading-relaxed mb-5">
                   "My Vidyon transformed how we manage our school. What used to take hours 
                   now takes minutes. The attendance system alone has saved us countless 
                   headaches and improved parent communication significantly."
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="font-heading font-bold text-primary">RS</span>
+                  <div className="w-11 h-11 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="font-heading font-bold text-primary text-sm">RS</span>
                   </div>
                   <div>
-                    <div className="font-heading font-semibold">Dr. Rajesh Sharma</div>
-                    <div className="text-sm text-muted-foreground">Principal, Delhi Public School</div>
+                    <div className="font-heading font-semibold text-sm">Dr. Rajesh Sharma</div>
+                    <div className="text-xs text-muted-foreground">Principal, Delhi Public School</div>
                   </div>
                 </div>
               </div>

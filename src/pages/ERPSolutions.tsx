@@ -101,26 +101,25 @@ const ERPSolutions = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-28 pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="hero-orb hero-orb-secondary w-[400px] h-[400px] bottom-[-20%] left-[-10%] animate-pulse-glow" />
         
         <div className="container-custom relative">
           <ScrollAnimation animation="fade-up">
-            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+            <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               ERP Solutions
             </span>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-5 max-w-4xl">
               Complete Educational{" "}
               <span className="text-gradient">ERP Platform</span>
             </h1>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={200}>
-            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed mb-8">
+            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed mb-6">
               Our modular ERP system seamlessly integrates every aspect of educational 
               institution management. Pick the modules you need, or deploy the complete suite.
             </p>
@@ -136,38 +135,38 @@ const ERPSolutions = () => {
       </section>
 
       {/* Modules Grid */}
-      <section className="section-padding">
+      <section className="py-12 md:py-16">
         <div className="container-custom">
           <ScrollAnimation animation="fade-up">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-center mb-3">
               12 Integrated <span className="text-gradient">Modules</span>
             </h2>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-up" delay={100}>
-            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-10">
               Each module is designed to work independently or as part of the complete ecosystem. 
               Start small and scale as you grow.
             </p>
           </ScrollAnimation>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {modules.map((module, index) => (
               <ScrollAnimation key={index} animation="fade-up" delay={index * 50}>
-                <div className={`card-elevated p-6 h-full ${module.highlight ? "ring-2 ring-primary/50" : ""}`}>
+                <div className={`card-elevated p-5 h-full ${module.highlight ? "ring-2 ring-primary/50" : ""}`}>
                   {module.highlight && (
-                    <span className="inline-block text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full mb-4">
+                    <span className="inline-block text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full mb-3">
                       Most Popular
                     </span>
                   )}
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-primary flex items-center justify-center mb-5">
-                    <module.icon className="w-7 h-7 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center mb-4">
+                    <module.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl mb-3">{module.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{module.description}</p>
-                  <ul className="space-y-2">
+                  <h3 className="font-heading font-semibold text-lg mb-2">{module.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3">{module.description}</p>
+                  <ul className="space-y-1.5">
                     {module.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm">
+                      <li key={i} className="flex items-center gap-2 text-xs">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                         <span>{feature}</span>
                       </li>
@@ -181,25 +180,25 @@ const ERPSolutions = () => {
       </section>
 
       {/* Integration Section */}
-      <section className="section-padding bg-foreground text-background">
+      <section className="py-12 md:py-16 bg-foreground text-background">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
               <ScrollAnimation animation="fade-right">
-                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="font-heading text-2xl md:text-3xl font-bold mb-5">
                   Seamless <span className="text-primary">Integration</span>
                 </h2>
               </ScrollAnimation>
               
               <ScrollAnimation animation="fade-right" delay={100}>
-                <p className="text-background/70 text-lg leading-relaxed mb-6">
+                <p className="text-background/70 leading-relaxed mb-5">
                   Our ERP platform is designed with interoperability in mind. All modules share a 
                   unified database, ensuring data consistency and eliminating redundancy.
                 </p>
               </ScrollAnimation>
               
               <ScrollAnimation animation="fade-right" delay={200}>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                   {[
                     "Single sign-on across all modules",
                     "Real-time data synchronization",
@@ -207,8 +206,8 @@ const ERPSolutions = () => {
                     "API access for custom integrations",
                     "Third-party app marketplace",
                   ].map((item, index) => (
-                    <li key={index} className="flex items-center gap-3 text-background/80">
-                      <ChevronRight className="w-5 h-5 text-primary shrink-0" />
+                    <li key={index} className="flex items-center gap-3 text-background/80 text-sm">
+                      <ChevronRight className="w-4 h-4 text-primary shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -219,8 +218,8 @@ const ERPSolutions = () => {
             <ScrollAnimation animation="fade-left">
               <div className="relative">
                 {/* Central Hub */}
-                <div className="w-32 h-32 rounded-full bg-primary flex items-center justify-center mx-auto z-10 relative">
-                  <span className="font-heading font-bold text-primary-foreground text-lg">My Vidyon</span>
+                <div className="w-28 h-28 rounded-full bg-primary flex items-center justify-center mx-auto z-10 relative">
+                  <span className="font-heading font-bold text-primary-foreground text-sm">My Vidyon</span>
                 </div>
                 
                 {/* Orbiting Modules */}
@@ -228,14 +227,14 @@ const ERPSolutions = () => {
                   {[GraduationCap, ClipboardList, BarChart3, CreditCard].map((Icon, index) => (
                     <div
                       key={index}
-                      className="absolute w-12 h-12 rounded-full bg-background/10 flex items-center justify-center"
+                      className="absolute w-10 h-10 rounded-full bg-background/10 flex items-center justify-center"
                       style={{
                         top: `${50 + 40 * Math.sin((index * Math.PI) / 2)}%`,
                         left: `${50 + 40 * Math.cos((index * Math.PI) / 2)}%`,
                         transform: "translate(-50%, -50%)",
                       }}
                     >
-                      <Icon className="w-6 h-6 text-primary" />
+                      <Icon className="w-5 h-5 text-primary" />
                     </div>
                   ))}
                 </div>
