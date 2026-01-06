@@ -169,61 +169,61 @@ const CareersPage = () => {
                         {/* Navigation Items */}
                         <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide">
                             {/* Job Search */}
-                            <a
-                                href="/careers/job-search"
+                            <Link
+                                to="/careers/job-search"
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-background/90 hover:text-primary focus:text-primary active:text-primary hover:bg-background/10 rounded-md transition-colors whitespace-nowrap"
                             >
                                 <Search className="w-4 h-4" />
                                 <span className="hidden sm:inline">Job Search</span>
-                            </a>
+                            </Link>
 
                             {/* Saved Jobs */}
-                            <a
-                                href="/careers/saved-jobs"
+                            <Link
+                                to="/careers/saved-jobs"
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-background/90 hover:text-primary focus:text-primary active:text-primary hover:bg-background/10 rounded-md transition-colors whitespace-nowrap"
                             >
                                 <Bookmark className="w-4 h-4" />
                                 <span className="hidden sm:inline">Saved Jobs</span>
-                            </a>
+                            </Link>
 
                             {/* Access Application */}
-                            <a
-                                href="/careers/access-application"
+                            <Link
+                                to="/careers/access-application"
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-background/90 hover:text-primary focus:text-primary active:text-primary hover:bg-background/10 rounded-md transition-colors whitespace-nowrap"
                             >
                                 <FileText className="w-4 h-4" />
                                 <span className="hidden sm:inline">Access Application</span>
-                            </a>
+                            </Link>
 
                             {/* Divider */}
                             <div className="h-6 w-px bg-background/20 mx-2 hidden md:block" />
 
                             {/* Who We Are */}
-                            <a
-                                href="/careers/who-we-are"
+                            <Link
+                                to="/careers/who-we-are"
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-background/90 hover:text-primary focus:text-primary active:text-primary hover:bg-background/10 rounded-md transition-colors whitespace-nowrap"
                             >
                                 <Users className="w-4 h-4" />
                                 <span className="hidden sm:inline">Who We Are</span>
-                            </a>
+                            </Link>
 
                             {/* Life at My Vidyon */}
-                            <a
-                                href="/careers/life-at-my-vidyon"
+                            <Link
+                                to="/careers/life-at-my-vidyon"
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-background/90 hover:text-primary focus:text-primary active:text-primary hover:bg-background/10 rounded-md transition-colors whitespace-nowrap"
                             >
                                 <Building2 className="w-4 h-4" />
                                 <span className="hidden sm:inline">Life at My Vidyon</span>
-                            </a>
+                            </Link>
 
                             {/* How We Hire */}
-                            <a
-                                href="/careers/how-we-hire"
+                            <Link
+                                to="/careers/how-we-hire"
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-background/90 hover:text-primary focus:text-primary active:text-primary hover:bg-background/10 rounded-md transition-colors whitespace-nowrap"
                             >
                                 <UserCheck className="w-4 h-4" />
                                 <span className="hidden sm:inline">How We Hire</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
