@@ -18,6 +18,15 @@ export async function submitContactForm(data: {
     institution?: string
     message: string
 }) {
+    // Check configuration before making request
+    if (supabaseUrl === 'https://your-project.supabase.co' || supabaseUrl.includes('your-project')) {
+        console.error('Supabase URL is not configured correctly:', supabaseUrl)
+        return {
+            success: false,
+            error: 'Configuration Error: VITE_SUPABASE_URL is not set in your deployment environment variables.'
+        }
+    }
+
     try {
         // Call the Edge Function
         const { data: responseData, error } = await supabase.functions.invoke('send-contact-email', {
@@ -25,18 +34,27 @@ export async function submitContactForm(data: {
         })
 
         if (error) {
+            console.error('Supabase Function Error:', error)
             throw error
         }
 
         return {
             success: true,
-            message: responseData.message || 'Message sent successfully!'
+            message: responseData?.message || 'Message sent successfully!'
         }
     } catch (error: any) {
-        console.error('Contact form error:', error)
+        console.error('Contact form invocation error:', error)
+
+        // Improve error message for common issues
+        let errorMessage = error.message || 'Failed to send message.'
+
+        if (errorMessage.includes('Failed to send a request to the Edge Function')) {
+            errorMessage = 'Connection failed. Please check your network or try again later. (Error: Function Unreachable)'
+        }
+
         return {
             success: false,
-            error: error.message || 'Failed to send message. Please try again.'
+            error: errorMessage
         }
     }
 }

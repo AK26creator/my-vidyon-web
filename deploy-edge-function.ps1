@@ -28,6 +28,12 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "4. View logs:" -ForegroundColor White
     Write-Host "   npx supabase functions logs send-contact-email --follow" -ForegroundColor Gray
     Write-Host ""
+    Write-Host "5. IMPORTANT: Frontend Configuration" -ForegroundColor Magenta
+    Write-Host "   Ensure your Production Environment (Vercel/Netlify) has these variables:" -ForegroundColor White
+    Write-Host "   - VITE_SUPABASE_URL: (Your Supabase Project URL)" -ForegroundColor Gray
+    Write-Host "   - VITE_SUPABASE_ANON_KEY: (Your Supabase Anon Key)" -ForegroundColor Gray
+    Write-Host "   Without these, the deployed website cannot contact the Edge Function." -ForegroundColor Yellow
+    Write-Host ""
     Write-Host "📧 Email Configuration:" -ForegroundColor Cyan
     Write-Host "   - Using Gmail SMTP (native Deno implementation)" -ForegroundColor White
     Write-Host "   - Emails will be sent to: madhankumar070406@gmail.com" -ForegroundColor White
